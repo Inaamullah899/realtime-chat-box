@@ -1,10 +1,16 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import Chat from "./components/chat";
+import Join from "./components/join";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function App() {
-  <h1>hy this is me</h1>;
-}
+const App = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Join />} />
+        <Route path="/chat" element={<Chat />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
